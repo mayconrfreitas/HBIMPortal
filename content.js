@@ -1,9 +1,10 @@
 var viewModels = [
-{name:'Joule House',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIxOTg2NzIwNF8wMTkzMzI0MTU5MjU0NTQ2N18xNTI0MjE5ODY3MjA0LnJ2dA', image:'./thumbs/joule.jpg'},
-{name:'Victorian House',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIxOTg5OTY3Nl8wMjI3ODQ1ODUxNTgxOTE3MjhfMTUyNDIxOTg5OTY3Ni5ydnQ',image:'./thumbs/victorian.jpg'},
-{name:'Hassell Drive',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIxOTg4MzU2OF8wMDU0NTk3OTgxNDIzNjExNzJfMTUyNDIxOTg4MzU2OC5ydnQ',image:'./thumbs/hassell.jpg'},
-{name:'Nozha House',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIyMDQyODA1NF8wNDUwODMwOTg4ODU5MjM3Ml8xNTI0MjIwNDI4MDU0LnJ2dA',image:'./thumbs/nozha.jpg'},
-{name:'CLUSTER',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUxNTE1NjMzODE4MF8wOTU5MTk2MDY5MzQ0MjEwOV8xNTE1MTU2MzM4MTgyLnJ2dA',image:'./thumbs/cluster.jpg'}
+// {name:'Joule House',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIxOTg2NzIwNF8wMTkzMzI0MTU5MjU0NTQ2N18xNTI0MjE5ODY3MjA0LnJ2dA', image:'./thumbs/joule.jpg'},
+{name:'Acaiaca',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6ZXkwaWJ5eGd5bml5ODdsaHZ2aWFkeTV5b2xtZDhnaTBwMDhndGZ2aWdleHo5dW5mLWJhc2ljLWFwcC9FRF9BQ0FJQUNBX1BST1BPU1RBXzQucnZ0', image:'./thumbs/joule.jpg'},
+// {name:'Victorian House',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIxOTg5OTY3Nl8wMjI3ODQ1ODUxNTgxOTE3MjhfMTUyNDIxOTg5OTY3Ni5ydnQ',image:'./thumbs/victorian.jpg'},
+// {name:'Hassell Drive',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIxOTg4MzU2OF8wMDU0NTk3OTgxNDIzNjExNzJfMTUyNDIxOTg4MzU2OC5ydnQ',image:'./thumbs/hassell.jpg'},
+// {name:'Nozha House',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUyNDIyMDQyODA1NF8wNDUwODMwOTg4ODU5MjM3Ml8xNTI0MjIwNDI4MDU0LnJ2dA',image:'./thumbs/nozha.jpg'},
+// {name:'CLUSTER',documentId:'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci90MTUxNTE1NjMzODE4MF8wOTU5MTk2MDY5MzQ0MjEwOV8xNTE1MTU2MzM4MTgyLnJ2dA',image:'./thumbs/cluster.jpg'}
 ];
 
 var states = [ //states for live data
@@ -35,7 +36,8 @@ var docProperties = [
 ];
 
 var timelines = [
-[{type: 'date', date: '16. 6. 2016'}, {type:'article', title: 'Uploaded Model', body:'Filetype: RVT. Uploaded on 13/10/2017', footer:'<img src="./thumbs/joule.jpg" width="80" height="80" />'}],
+// [{type: 'date', date: '16. 6. 2016'}, {type:'article', title: 'Uploaded Model', body:'Filetype: RVT. Uploaded on 13/10/2017', footer:'<img src="./thumbs/joule.jpg" width="80" height="80" />'}],
+[{type:'date',date:'16. 6. 2016'},{type:'article',title:'Uploaded Model',body:'Filetype: RVT. Uploaded on 13/10/2017',footer:'<img src="./thumbs/joule.jpg" width="80" height="80" />'},{type:'date',date:'23. 7. 2016'},{type:'article',title:'Tests',body:'Testando 123',footer:'<img src="./thumbs/joule.jpg" width="80" height="80" />'}],
 [],
 [{type:'date',date:'15. 2. 2017'},{type:'article',title:'Uploaded Model',body:'Filetype: rvt. Uploaded on 11/11/2017',footer:'<img src="./thumbs/hassell.jpg" width="80" height="80" />'},{type:'date',date:'10. 11. 2016'},{type:'article',title:'U-Value Measurement',body:'Category: Measurement Report. Auto generated from document.',footer:'<img src="./static/heatflux.jpg" width="80" height="80" />'},{type:'date',date:'28. 2. 2016'},{type:'article',title:'Thermography',body:'Category: Measurement Report. Auto generated from document.',footer:'<img src="./static/IR_0418.jpg" width="80" height="80" /> <img src="./static/IR_0408.jpg" width="80" height="80" /> <img src="./static/IR_0407.jpg" width="80" height="80" />'},{type:'date',date:'7. 12. 2015'},{type:'article',title:'Damp and Condensation Survey',body:'Category: Measurement Report. Auto generated from document.',footer:''},{type:'date',date:'16. 9. 2015'},{type:'event',icon:'plus-sign',text:'Sensor Installation'},{type:'date',date:'2004'},{type:'event',icon:'plus-sign',text:'Boiler Upgrades'},{type:'date',date:'1983'},{type:'event',icon:'plus-sign',text:'Construction'}],
 [],

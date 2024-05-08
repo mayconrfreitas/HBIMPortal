@@ -7,18 +7,41 @@ var APIUrl = 'http://data-hbim.rhcloud.com/api';
 var objProps = {}
 var nodeSelected = 2784;
 
+// function getToken(callback) {
+//     var url="https://360.autodesk.com/Viewer/GetAccessToken"
+//     var xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function() {
+//         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//             var token = JSON.parse(xmlhttp.responseText);
+//             console.log(token);
+//             callback(token);
+//         }
+//     };
+//     xmlhttp.open("GET", url, true);
+//     xmlhttp.send();
+// }
+
 function getToken(callback) {
-    var url="https://360.autodesk.com/Viewer/GetAccessToken"
+    var url = 'https://developer.api.autodesk.com/authentication/v1/authenticate';
     var xmlhttp = new XMLHttpRequest();
+    var clientId = window.clientId;
+    var clientSecret = window.clientSecret;
+    var params = 'client_id=' + clientId + '&client_secret=' + clientSecret + '&grant_type=client_credentials&scope=data:read data:write';
+
     xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var token = JSON.parse(xmlhttp.responseText);
-            console.log(token);
-            callback(token);
+        if (xmlhttp.readyState == 4) {
+            if (xmlhttp.status == 200) {
+                var token = JSON.parse(xmlhttp.responseText);
+                callback(token['access_token'], token['expires_in']);
+            } else {
+                console.error('[-] Error getting token:', xmlhttp.responseText);
+            }
         }
     };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+
+    xmlhttp.open('POST', url, true);
+    xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xmlhttp.send(params);
 }
 
 
